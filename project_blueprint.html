@@ -44,10 +44,10 @@
             <p class="text-xs text-stone-500 mt-2">Project Proposal Dashboard &bull; July 2026</p>
         </div>
         <ul class="flex flex-row md:flex-col text-sm border-t border-stone-200">
-            <li><a href="#vision" class="nav-link block py-4 px-6 hover:bg-stone-200 transition-colors active" onclick="updateNav(this)">&#x1F3AF; Vision & Scope</a></li>
-            <li><a href="#timeline" class="nav-link block py-4 px-6 hover:bg-stone-200 transition-colors" onclick="updateNav(this)">&#x23F3; Execution Timeline</a></li>
-            <li><a href="#targets" class="nav-link block py-4 px-6 hover:bg-stone-200 transition-colors" onclick="updateNav(this)">&#x1F4CA; Technical Targets</a></li>
-            <li><a href="#resources" class="nav-link block py-4 px-6 hover:bg-stone-200 transition-colors" onclick="updateNav(this)">&#x1F4BC; Resources</a></li>
+            <li><a href="#vision" class="nav-link block py-4 px-6 hover:bg-stone-200 transition-colors active flex items-center" onclick="updateNav(this)"><span class="inline-flex items-center justify-center w-5 h-5 text-[10px] font-bold text-teal-800 bg-teal-100 rounded mr-3 flex-shrink-0">01</span> Vision & Scope</a></li>
+            <li><a href="#timeline" class="nav-link block py-4 px-6 hover:bg-stone-200 transition-colors flex items-center" onclick="updateNav(this)"><span class="inline-flex items-center justify-center w-5 h-5 text-[10px] font-bold text-stone-600 bg-stone-200 rounded mr-3 flex-shrink-0">02</span> Execution Timeline</a></li>
+            <li><a href="#targets" class="nav-link block py-4 px-6 hover:bg-stone-200 transition-colors flex items-center" onclick="updateNav(this)"><span class="inline-flex items-center justify-center w-5 h-5 text-[10px] font-bold text-stone-600 bg-stone-200 rounded mr-3 flex-shrink-0">03</span> Technical Targets</a></li>
+            <li><a href="#resources" class="nav-link block py-4 px-6 hover:bg-stone-200 transition-colors flex items-center" onclick="updateNav(this)"><span class="inline-flex items-center justify-center w-5 h-5 text-[10px] font-bold text-stone-600 bg-stone-200 rounded mr-3 flex-shrink-0">04</span> Resources & Budget</a></li>
         </ul>
     </nav>
 
@@ -60,41 +60,53 @@
 
         <section id="vision" class="mb-20 max-w-5xl pt-8 border-t border-stone-200">
             <div class="mb-8">
-                <h3 class="text-2xl font-bold text-teal-800 mb-2">&#x1F3AF; Vision, Scope & Objectives</h3>
+                <div class="flex items-center space-x-3 mb-2">
+                    <span class="px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-teal-800 bg-teal-100 rounded">Section 01</span>
+                    <h3 class="text-2xl font-bold text-teal-900">Vision, Scope & Objectives</h3>
+                </div>
                 <p class="text-stone-700">This section outlines the foundational context of the project. It details the core problem regarding unstructured data and privacy risks, and defines the specific, measurable objectives the offline architecture aims to achieve. Click on the objectives below to reveal how the proposed scope addresses each goal.</p>
             </div>
             
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 mb-8">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 mb-8 border-l-4 border-l-teal-600">
                 <h4 class="font-semibold text-stone-800 mb-2">The Background Context</h4>
                 <p class="text-sm text-stone-600">Organizations struggle to connect data across mixed, unstructured formats (PDFs, Word, Excel). Cloud-based AI introduces severe data privacy risks. This project mitigates these risks by automating data extraction and synthesis <strong>without sensitive data ever leaving the user's local hardware</strong>.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-stone-50 p-6 rounded-xl border border-stone-200 cursor-pointer hover:shadow-md transition-shadow" onclick="toggleObj('obj1')">
-                    <div class="text-2xl mb-2">&#x1F4C4;</div>
+                <div class="bg-stone-50 p-6 rounded-xl border border-stone-200 cursor-pointer hover:shadow-md transition-shadow group" onclick="toggleObj('obj1')">
+                    <span class="inline-block px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-teal-800 bg-teal-100 border border-teal-200 rounded-md mb-3">Objective 01</span>
                     <h5 class="font-bold text-stone-800 mb-2">1. Offline Extraction</h5>
                     <p class="text-sm text-stone-600 mb-4">Process and extract text, tables, and image-based charts completely offline.</p>
-                    <button class="text-teal-600 text-xs font-semibold uppercase tracking-wider">View Scope &#x25BC;</button>
+                    <button class="inline-flex items-center text-teal-700 group-hover:text-teal-900 text-xs font-semibold uppercase tracking-wider transition-colors">
+                        <span>View Scope Details</span>
+                        <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
                     <div id="obj1" class="hidden-content mt-4 pt-4 border-t border-stone-200 text-sm text-stone-700">
                         <strong>Scope Details:</strong> Establishes core web framework and file parsing logic to handle at least 5 formats: .xlsx, .csv, .md, .docx, and .pdf.
                     </div>
                 </div>
 
-                <div class="bg-stone-50 p-6 rounded-xl border border-stone-200 cursor-pointer hover:shadow-md transition-shadow" onclick="toggleObj('obj2')">
-                    <div class="text-2xl mb-2">&#x1F9E0;</div>
+                <div class="bg-stone-50 p-6 rounded-xl border border-stone-200 cursor-pointer hover:shadow-md transition-shadow group" onclick="toggleObj('obj2')">
+                    <span class="inline-block px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-teal-800 bg-teal-100 border border-teal-200 rounded-md mb-3">Objective 02</span>
                     <h5 class="font-bold text-stone-800 mb-2">2. AI Synthesis</h5>
                     <p class="text-sm text-stone-600 mb-4">Synthesize data using a local VLM to output structured mappings.</p>
-                    <button class="text-teal-600 text-xs font-semibold uppercase tracking-wider">View Scope &#x25BC;</button>
+                    <button class="inline-flex items-center text-teal-700 group-hover:text-teal-900 text-xs font-semibold uppercase tracking-wider transition-colors">
+                        <span>View Scope Details</span>
+                        <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
                     <div id="obj2" class="hidden-content mt-4 pt-4 border-t border-stone-200 text-sm text-stone-700">
                         <strong>Scope Details:</strong> Integrates a local AI engine (Ollama) and queue workers to handle heavy data extraction, including image-to-text chart interpretation, generating a 100% structured JSON output.
                     </div>
                 </div>
 
-                <div class="bg-stone-50 p-6 rounded-xl border border-stone-200 cursor-pointer hover:shadow-md transition-shadow" onclick="toggleObj('obj3')">
-                    <div class="text-2xl mb-2">&#x1F4BB;</div>
+                <div class="bg-stone-50 p-6 rounded-xl border border-stone-200 cursor-pointer hover:shadow-md transition-shadow group" onclick="toggleObj('obj3')">
+                    <span class="inline-block px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-teal-800 bg-teal-100 border border-teal-200 rounded-md mb-3">Objective 03</span>
                     <h5 class="font-bold text-stone-800 mb-2">3. Dynamic Dashboard</h5>
                     <p class="text-sm text-stone-600 mb-4">Generate an interactive frontend dashboard reflecting AI findings quickly.</p>
-                    <button class="text-teal-600 text-xs font-semibold uppercase tracking-wider">View Scope &#x25BC;</button>
+                    <button class="inline-flex items-center text-teal-700 group-hover:text-teal-900 text-xs font-semibold uppercase tracking-wider transition-colors">
+                        <span>View Scope Details</span>
+                        <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
                     <div id="obj3" class="hidden-content mt-4 pt-4 border-t border-stone-200 text-sm text-stone-700">
                         <strong>Scope Details:</strong> Develops a Vue/React frontend to visualize synthesized data within 5 minutes of upload, ensuring background queue management stabilizes CPU/RAM usage.
                     </div>
@@ -104,7 +116,10 @@
 
         <section id="timeline" class="mb-20 max-w-5xl pt-8 border-t border-stone-200">
             <div class="mb-8">
-                <h3 class="text-2xl font-bold text-teal-800 mb-2">&#x23F3; Execution Timeline</h3>
+                <div class="flex items-center space-x-3 mb-2">
+                    <span class="px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-teal-800 bg-teal-100 rounded">Section 02</span>
+                    <h3 class="text-2xl font-bold text-teal-900">Execution Timeline</h3>
+                </div>
                 <p class="text-stone-700">This section visualizes the project schedule across three distinct phases. The chart below illustrates the sequential progression of tasks from August to October 2026. Hover over the bars to view the specific focus of each phase and its duration.</p>
             </div>
             
@@ -131,7 +146,10 @@
 
         <section id="targets" class="mb-20 max-w-5xl pt-8 border-t border-stone-200">
             <div class="mb-8">
-                <h3 class="text-2xl font-bold text-teal-800 mb-2">&#x1F4CA; Technical Targets & KPIs</h3>
+                <div class="flex items-center space-x-3 mb-2">
+                    <span class="px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-teal-800 bg-teal-100 rounded">Section 03</span>
+                    <h3 class="text-2xl font-bold text-teal-900">Technical Targets & KPIs</h3>
+                </div>
                 <p class="text-stone-700">This section breaks down the Monitoring and Evaluation criteria into measurable targets. The project's success is tied to strict performance and accuracy metrics, evaluated via bi-weekly Agile sprint reviews. The visualizations below represent the target thresholds required for project success.</p>
             </div>
 
@@ -164,45 +182,54 @@
 
         <section id="resources" class="mb-20 max-w-5xl pt-8 border-t border-stone-200">
             <div class="mb-8">
-                <h3 class="text-2xl font-bold text-teal-800 mb-2">&#x1F4BC; Resources, Budget & Stakeholders</h3>
-                <p class="text-stone-700">This section details the human and capital requirements to execute the proposal. It categorizes the budget into recurring and non-recurring expenses focused heavily on local processing hardware, and lists the key approval stakeholders.</p>
+                <div class="flex items-center space-x-3 mb-2">
+                    <span class="px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-teal-800 bg-teal-100 rounded">Section 04</span>
+                    <h3 class="text-2xl font-bold text-teal-900">Resources & Budget Allocation</h3>
+                </div>
+                <p class="text-stone-700">This section details the capital requirements and financial allocation to execute the proposal. It categorizes the budget into recurring operational expenses and non-recurring hardware/development costs focused heavily on local processing infrastructure.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
-                    <h4 class="font-bold text-stone-800 mb-4 border-b border-stone-100 pb-2">&#x1F4B0; Budget Allocation</h4>
-                    <div class="mb-4">
-                        <strong class="text-stone-800 block text-sm">Non-Recurring Expenses</strong>
-                        <ul class="list-disc pl-5 text-sm text-stone-600 mt-1">
-                            <li>Hardware acquisition: Workstations/servers with minimum 32GB RAM.</li>
-                            <li>Dedicated GPUs for local Vision-Language Model inference.</li>
-                            <li>Initial development and engineering costs.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <strong class="text-stone-800 block text-sm">Monthly Recurring Expenses</strong>
-                        <ul class="list-disc pl-5 text-sm text-stone-600 mt-1">
-                            <li>Ongoing developer maintenance and retainer.</li>
-                            <li>Internal IT infrastructure power and maintenance costs.</li>
-                        </ul>
-                    </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                <div class="flex items-center justify-between border-b border-stone-200 pb-4 mb-6">
+                    <h4 class="font-bold text-stone-900 text-lg">Financial Breakdown & Budget Allocation</h4>
+                    <span class="px-3 py-1 text-xs font-semibold text-teal-800 bg-teal-100 rounded-full">Infrastructure & Operations</span>
                 </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 flex flex-col">
-                    <h4 class="font-bold text-stone-800 mb-4 border-b border-stone-100 pb-2">&#x1F465; Key Stakeholders</h4>
-                    <div class="flex-grow flex flex-col justify-center space-y-4">
-                        <div class="flex items-center p-3 bg-stone-50 rounded border border-stone-200">
-                            <div class="bg-teal-100 text-teal-800 font-bold px-3 py-1 rounded text-xs mr-4 w-24 text-center">CLIENT</div>
-                            <div class="text-stone-800 font-medium text-sm">[Name]</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-stone-50 p-5 rounded-lg border border-stone-200">
+                        <div class="flex items-center justify-between mb-3">
+                            <strong class="text-stone-900 font-semibold text-sm">Non-Recurring Expenses (CapEx)</strong>
+                            <span class="text-[11px] font-medium text-stone-500 bg-stone-200 px-2 py-0.5 rounded">One-time Investment</span>
                         </div>
-                        <div class="flex items-center p-3 bg-stone-50 rounded border border-stone-200">
-                            <div class="bg-amber-100 text-amber-800 font-bold px-3 py-1 rounded text-xs mr-4 w-24 text-center">SPONSOR</div>
-                            <div class="text-stone-800 font-medium text-sm">[Name]</div>
+                        <ul class="space-y-2 text-sm text-stone-600">
+                            <li class="flex items-start">
+                                <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 mr-2 flex-shrink-0"></span>
+                                <span><strong>Hardware Acquisition:</strong> High-performance workstations/servers with minimum 32GB RAM.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 mr-2 flex-shrink-0"></span>
+                                <span><strong>GPU Acceleration:</strong> Dedicated GPUs for local Vision-Language Model inference.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 mr-2 flex-shrink-0"></span>
+                                <span><strong>Engineering:</strong> Initial architecture development and setup costs.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-stone-50 p-5 rounded-lg border border-stone-200">
+                        <div class="flex items-center justify-between mb-3">
+                            <strong class="text-stone-900 font-semibold text-sm">Monthly Recurring Expenses (OpEx)</strong>
+                            <span class="text-[11px] font-medium text-stone-500 bg-stone-200 px-2 py-0.5 rounded">Operational Cost</span>
                         </div>
-                        <div class="flex items-center p-3 bg-stone-50 rounded border border-stone-200">
-                            <div class="bg-stone-200 text-stone-800 font-bold px-3 py-1 rounded text-xs mr-4 w-24 text-center">MANAGER</div>
-                            <div class="text-stone-800 font-medium text-sm">[Name]</div>
-                        </div>
+                        <ul class="space-y-2 text-sm text-stone-600">
+                            <li class="flex items-start">
+                                <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 mr-2 flex-shrink-0"></span>
+                                <span><strong>Developer Retainer:</strong> Ongoing software maintenance, queue tuning, and updates.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 mr-2 flex-shrink-0"></span>
+                                <span><strong>IT Infrastructure:</strong> Internal power, cooling, and network maintenance costs.</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -221,9 +248,19 @@
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active', 'bg-stone-200', 'font-semibold');
                 link.style.borderRight = 'none';
+                const badge = link.querySelector('span');
+                if (badge) {
+                    badge.classList.remove('bg-teal-100', 'text-teal-800');
+                    badge.classList.add('bg-stone-200', 'text-stone-600');
+                }
             });
             element.classList.add('active', 'bg-stone-200', 'font-semibold');
             element.style.borderRight = '4px solid #0d9488';
+            const badge = element.querySelector('span');
+            if (badge) {
+                badge.classList.remove('bg-stone-200', 'text-stone-600');
+                badge.classList.add('bg-teal-100', 'text-teal-800');
+            }
         }
 
         // Scroll Spy for Navigation
@@ -243,9 +280,18 @@
             navLinks.forEach((link) => {
                 link.classList.remove("active");
                 link.style.borderRight = 'none';
+                const badge = link.querySelector('span');
+                if (badge) {
+                    badge.classList.remove('bg-teal-100', 'text-teal-800');
+                    badge.classList.add('bg-stone-200', 'text-stone-600');
+                }
                 if (link.getAttribute("href").includes(current)) {
                     link.classList.add("active");
                     link.style.borderRight = '4px solid #0d9488';
+                    if (badge) {
+                        badge.classList.remove('bg-stone-200', 'text-stone-600');
+                        badge.classList.add('bg-teal-100', 'text-teal-800');
+                    }
                 }
             });
         });
